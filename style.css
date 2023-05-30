@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Aboreto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  transition: all 0.3s;
+}
+
+.change.container {
+  background-color: #101010;
+}
+
+.orange.container {
+  background-color: #fd5a1e;
+}
+
+.landing {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s 0.5s;
+}
+
+.navigate .banner {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.banner h1 {
+  font-size: 8rem;
+}
+
+.banner h1:nth-child(2) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.banner h1:nth-child(3) {
+  position: relative;
+}
+
+.banner h1:nth-child(3)::after {
+  content: "";
+  width: 8rem;
+  height: 1rem;
+  background-color: #fd5a1e;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 2rem;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  width: 10rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  overflow: hidden;
+}
+
+.lines {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.line {
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s, transform 0.5s cubic-bezier(0.5, 0, 0, 0.5);
+}
+
+.change .line {
+  background-color: #fff;
+}
+
+.navigate .line-1 {
+  transform: rotateZ(135deg) translate(0.7rem);
+}
+
+.navigate .line-2 {
+  transform: rotateZ(225deg) translate(0.7rem);
+}
+
+.menu-icon span {
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  right: 0;
+  transition: all 0.3s;
+}
+
+.change .menu-icon span {
+  color: #fff;
+}
+
+.menu {
+  transition: transform 0.3s 0.1s;
+}
+
+.navigate .menu {
+  transform: translateY(-110%);
+  transition: transform 0.3s;
+}
+
+.close {
+  top: 100%;
+  transition: transform 0.3s 0.1s;
+}
+
+.navigate .close {
+  transform: translateY(-120%);
+  transition: transform 0.3s;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 0;
+  left: 15rem;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.navigate .navigation {
+  z-index: 100;
+}
+
+.navigation a {
+  height: 20%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigation a::before {
+  content: "";
+  width: 13rem;
+  height: 13rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.navigation a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation a span {
+  transition: color 0.3s;
+  z-index: 10;
+}
+
+.navigation:hover a span {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.navigation a:hover span {
+  color: #fff;
+}
+
+.num {
+  font-size: 3rem;
+  margin-right: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+  transform: translateY(300%);
+}
+
+.navigate .num {
+  transform: translateY(0);
+}
+
+.nav-item,
+.contact {
+  font-size: 8rem;
+  transform: translateY(150%);
+}
+
+.navigate .nav-item {
+  transform: translateY(0);
+}
+
+.navigation a:nth-child(1) .nav-item,
+.navigation a:nth-child(1) .num {
+  transition: transform 0.6s;
+}
+
+.navigation a:nth-child(2) .nav-item,
+.navigation a:nth-child(2) .num {
+  transition: transform 0.6s 0.1s;
+}
+
+.navigation a:nth-child(3) .nav-item,
+.navigation a:nth-child(3) .num {
+  transition: transform 0.6s 0.2s;
+}
+
+.navigation a:nth-child(4) .nav-item,
+.navigation a:nth-child(4) .num {
+  transition: transform 0.6s 0.3s;
+}
+
+.navigation a:nth-child(5) .nav-item,
+.navigation a:nth-child(5) .num {
+  transition: transform 0.6s 0.4s;
+}
+
+.contact {
+  margin-left: 6rem;
+  color: #fd5a1e;
+}
+
+.navigation a:last-child i {
+  width: 8rem;
+  height: 8rem;
+  background-color: #fd5a1e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 4rem;
+  margin-left: 2rem;
+  transform: rotateZ(-35deg);
+  position: relative;
+  top: 100%;
+  transition: transform 0.6s, top 0.6s 0.4s;
+}
+
+.navigate .navigation a:last-child i {
+  top: 0;
+}
+
+.navigation a:hover:last-child i {
+  background-color: #fff;
+  color: #fd5a1e;
+  transform: rotateZ(0);
+}
+
+.logo {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  transform: rotateZ(-10deg);
+  cursor: pointer;
+}
+
+.logo span {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  color: #fd5a1e;
+  transition: all 0.3s;
+}
+
+.logo h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.9;
+  transition: all 0.3s;
+}
+
+.change .logo h1,
+.change .logo span {
+  color: #fff;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 8rem;
+  right: 15rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.navigate .social-media {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 0.5s;
+}
+
+.social-media h1 {
+  font-size: 7rem;
+  margin-bottom: 2rem;
+}
+
+.social-media a {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.2rem;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.change .social-media h1,
+.change .social-media a {
+  color: #fff;
+}
+
+.social-media a:hover {
+  padding-right: 7rem;
+}
+
+.social-media a::after {
+  content: "";
+  width: 5rem;
+  height: 0.3rem;
+  background-color: #fd5a1e;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scale(0);
+  transition: all 0.5s;
+}
+
+.social-media a:hover::after {
+  transform: translateY(-50%) scale(1);
+}
