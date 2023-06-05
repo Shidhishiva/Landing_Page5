@@ -17,11 +17,11 @@ html {
 }
 
 .change.container {
-  background-color: #101010;
+  background-color: #fc3bff;
 }
 
 .orange.container {
-  background-color: #fd5a1e;
+  background-color: #0d0101;
 }
 
 .landing {
@@ -96,7 +96,7 @@ html {
 }
 
 .change .line {
-  background-color: #fff;
+  background-color: #000000;
 }
 
 .navigate .line-1 {
@@ -116,7 +116,7 @@ html {
 }
 
 .change .menu-icon span {
-  color: #fff;
+  color: #3f0000;
 }
 
 .menu {
